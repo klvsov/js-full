@@ -9,14 +9,14 @@ let howMuch2 = +prompt('How much will it cost?');
 let appData = {
     'budget': money,
     'timeData': time,
-    'expenses': {
-        requiredCost1: howMuch1,
-        requiredCost2: howMuch2,
-    },
+    'expenses': {},
     'optionalExpenses': '',
     'income': [],
     'savings': false
 }
 
-let result = money + howMuch1 + howMuch2;
-alert(result / 30);
+appData.requiredCost1 = howMuch1;
+appData.requiredCost2 = howMuch2;
+
+let result = money / 30 ;
+alert(result);
