@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     let more = document.querySelector('.more'),
-        divMore = document.querySelector('.description'),
+        divMore = document.querySelector('.info'),
         overlay = document.querySelector('.overlay'),
         close = document.querySelector('.popup-close');
 
