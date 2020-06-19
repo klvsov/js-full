@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
         more.classList.remove('more-splash');
         document.body.style.overflow = ''
     });
-
+    
     function openWindow(){
         overlay.style.display = 'block';
         event.target.classList.add('more-splash');
