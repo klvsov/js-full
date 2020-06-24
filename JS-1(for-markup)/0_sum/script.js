@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
     function sumNumbers() {
         let sum = parseInt(num1.value) + parseInt(num2.value);
         res.innerHTML = sum;
-        btn.setAttribute('disabled', 'disabled');
+        this.disabled = true;
     }
 
     function unblock() {
-        btn.removeAttribute('disabled');
+        btn.disabled = false;
     }
 })

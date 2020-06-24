@@ -1,30 +1,36 @@
 window.addEventListener('DOMContentLoaded', () => {
     let num1 = document.querySelector('input[name=num1]'),
         num2 = document.querySelector('input[name=num2]'),
-        plus = document.querySelector('input.addition'),
-        minus = document.querySelector('input.subtraction'),
-        mult = document.querySelector('input.multiplication'),
-        div = document.querySelector('input.division'),
-        res = document.querySelector('.res');
+        buttons = document.querySelector('.buttons'),
+        res = document.querySelector('.res'),
+        answer = 0;
 
+    buttons.addEventListener('click', function(event){
+        if(event.target.tagName == "INPUT"){
+            calc(event.target.getAttribute('data-operation'));
+            res.textContent = answer;
+        }
+    });
     
-        plus.addEventListener('click', () => {
-            let answer = +num1.value + +num2.value;
-            res.textContent = answer;
-        });
+ 
+    function calc(op) {
+        let n1 = parseInt(num1.value);
+        let n2 = parseInt(num2.value);
 
-        minus.addEventListener('click', () => {
-            let answer = +num1.value - +num2.value;
-            res.textContent = answer;
-        });
-
-        mult.addEventListener('click', () => {
-            let answer = +num1.value * +num2.value;
-            res.textContent = answer;
-        });
-
-        div.addEventListener('click', () => {
-            let answer = +num1.value / +num2.value;
-            res.textContent = answer;
-        });
+        switch(op){
+            case '+':
+                answer = n1 + n2;
+                break;
+            case '-':
+                answer = n1 - n2;
+                break;
+            case '*':
+                answer = n1 * n2;
+                break;
+            case '/':
+                answer = n1 / n2;
+                break;
+        }
+    }
+        
 });

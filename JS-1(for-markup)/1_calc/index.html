@@ -14,10 +14,13 @@
 <body>
     <input type="number" name="num1" value="0">
     <input type="number" name="num2" value="0">
-    <input type="button" value="+" class="addition">
-    <input type="button" value="-" class="subtraction">
-    <input type="button" value="*" class="multiplication">
-    <input type="button" value="/" class="division">
+    <span class="buttons">
+        <input type="button" value="+" data-operation="+">
+        <input type="button" value="-" data-operation="-">
+        <input type="button" value="*" data-operation="*">
+        <input type="button" value="/" data-operation="/">
+    </span>
+    <span>=</span>
     <span class="res"></span>
     <script src="./script.js"></script>
 </body>
