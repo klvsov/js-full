@@ -1,0 +1,25 @@
+html, body{
+    margin: 40px;
+}
+
+input{
+    margin: 10px;
+    border: none;
+    outline: none;
+    background: antiquewhite;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.error{
+    box-shadow: 0 0 10px crimson;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus{
+    box-shadow: 0 0 10px cyan;
+}
+
+input[type="submit"]{
+    padding: 15px 20px;
+}

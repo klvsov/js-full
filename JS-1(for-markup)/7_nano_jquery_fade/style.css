@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 10px auto;
+    display: flex;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid grey;
+}
+
+.onfocus{
+    background: rgb(195, 218, 238);
+}
+
+.onselect{
+    background: lightseagreen;
+}
