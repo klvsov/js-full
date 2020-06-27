@@ -5,20 +5,23 @@ $(function(){
 
     jqBoxes.on('click', function(event){
         this.classList.toggle('onselect');
-        $(this).fadeOut(500, function(){
-            $(this).fadeIn(500);
-        });
+        calcPrice();
+        // $(this).fadeOut(500, function(){
+        //     $(this).fadeIn(500);
+        // });
     }).on('mouseover', function(){
         this.classList.add('onfocus');
     }).on('mouseout', function(){
         this.classList.remove('onfocus');
-    }).on('click', function(){
-        let a = parseInt(this.getAttribute('data-price'));
-        if(this.classList.contains('onselect')) {
-            sum += a;
-        } else {
-            sum -= a; 
-        }
-        sumContainer.textContent = sum;
     });
+
+    function calcPrice() {
+        let price = 0;
+        for (let i = 0; i < jqBoxes.length; i++){
+            if (jqBoxes[i].classList.contains('onselect')) {
+                price += parseInt(jqBoxes[i].getAttribute('data-price'));
+            }
+        }
+        sumContainer.textContent = price;
+    }
 });
